@@ -1,4 +1,6 @@
-body{background-color: #000;}
+body {
+  background-color: #000;
+}
 .list li {
   padding: 0;
   padding-left: 20px;
@@ -28,15 +30,6 @@ body{background-color: #000;}
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-}
-
 .basic_btn {
   background: #00c579;
   background: -moz-linear-gradient(top, #00c579 0%, #009f5b 100%);
@@ -235,66 +228,6 @@ body{background-color: #000;}
 }
 
 /*--end general style--*/
-
-/*--header--*/
-
-.navbar-brand {
-  max-width: 270px;
-}
-
-.navbar-nav li {
-  margin-left: 34px;
-}
-
-.navbar-nav li a {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 800;
-}
-
-.navbar-nav li > a {
-  padding: 0 0px 5px;
-  position: relative;
-}
-
-.navbar-nav li > a:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  transition: width 0.3s ease-in;
-  -webkit-transition: width 0.3s ease-in;
-  -moz-transition: width 0.3s ease-in;
-  -ms-transition: width 0.3s ease-in;
-  -o-transition: width 0.3s ease-in;
-  border-bottom: 1px solid #fff;
-}
-
-.navbar-nav li.current_page_item > a:after,
-.navbar-nav li:hover > a:after {
-  width: 100%;
-}
-
-.navbar {
-  padding: 42px 0;
-  transition: all 0.4s ease-in;
-  -webkit-transition: all 0.4s ease-in;
-  -moz-transition: all 0.4s ease-in;
-  -ms-transition: all 0.4s ease-in;
-  -o-transition: all 0.4s ease-in;
-}
-
-.scroll_nav {
-  transition: all 0.4s ease-in;
-  padding: 12px 0;
-  background-color: rgba(19, 56, 153, 0.95);
-  box-shadow: 0 0 25px 0 rgba(140, 142, 191, 0.3);
-  -webkit-transition: all 0.4s ease-in;
-  -moz-transition: all 0.4s ease-in;
-  -ms-transition: all 0.4s ease-in;
-  -o-transition: all 0.4s ease-in;
-}
 
 /*--banner--*/
 

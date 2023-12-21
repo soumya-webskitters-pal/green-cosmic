@@ -1,10 +1,12 @@
 import "./App.css";
-import NavBar from "./components/navigation";
+import Header from "./shared/Header";
+import Footer from "./shared/Footer";
 
 function App() {
   return (
     <>
-      <NavBar />
+      <Header />
+      <Footer />
     </>
   );
 }

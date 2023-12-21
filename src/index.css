@@ -35,7 +35,9 @@ img {
   height: auto;
   vertical-align: middle;
 }
-
+a {
+  text-decoration: none;
+}
 a,
 button,
 input[type="submit"] {
