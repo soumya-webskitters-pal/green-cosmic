@@ -80,16 +80,14 @@ export const PageData = {
       Banner: {
         Title: "Get Results With Influencer Marketing",
         SubText: [],
-        Images: [
-          {
-            Name: "",
+        BgImg:{
+          Name: "",
             Path: "desktop_banner2.svg",
-          },
-          {
+        },
+        FeatureImages:{
             Name: "",
             Path: "advt_banner.svg",
           },
-        ],
         CTA: [
           {
             Name: "I Am Blogger",
