@@ -18,9 +18,9 @@ function NavBar() {
             <a className="navbar-brand" href="#">
               {data && data.Icon && (
                 <img
-                  src="./src/assets/images/logo.svg"
+                  src={`./src/assets/${data.Icon.Path}`}
                   alt={data.Icon.Name}
-                  key={data.Icon.Path}
+                  key={Date.now() * Math.random()}
                 />
               )}
             </a>
@@ -30,8 +30,22 @@ function NavBar() {
             >
               <ul className="navbar-nav ml-auto">
                 {data?.Navbar?.map((item) => (
-                  <li key={item.Id}>
+                  <li
+                    key={Date.now() * Math.random()}
+                    className={
+                      item.SubMenu.length ? "menu-item-has-children" : null
+                    }
+                  >
                     <a href="#">{item.Name}</a>
+                    {item.SubMenu.length && (
+                      <ul>
+                        {item.SubMenu.map((el) => (
+                          <li key={Date.now() * Math.random()}>
+                            <a href="#">{el.Name}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -44,8 +58,7 @@ function NavBar() {
 }
 export default NavBar;
 
-{
-  /* <header class="main_nav sticky">
+/* <header class="main_nav sticky">
     <nav class="navbar navbar-expand-lg custom_navbar navbar-light" id="navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -93,4 +106,3 @@ export default NavBar;
       </div>
     </nav>
   </header> */
-}
