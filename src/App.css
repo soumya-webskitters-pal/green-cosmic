@@ -244,10 +244,6 @@ body {
   min-height: 100vh;
 }
 
-.home_banner_img img {
-  width: 100%;
-}
-
 .overlay {
   position: absolute;
   top: 0;
@@ -1069,98 +1065,12 @@ figure svg {
   right: 0;
 }
 
-.home_banner_img {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 25px;
-  background-color: #fff;
-  pointer-events: none;
-}
-
 .bg_img {
   width: 100%;
   position: relative;
   /* z-index:2; */
 }
 
-.rocket {
-  position: absolute;
-  bottom: 17%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20%;
-  z-index: 1;
-}
-
-.lft_man {
-  position: absolute;
-  left: 6%;
-  width: 32%;
-  bottom: 0;
-  z-index: 5;
-}
-
-.rt_man {
-  position: absolute;
-  right: 13%;
-  width: 20%;
-  bottom: 0.5%;
-  z-index: 7;
-}
-
-.small_man {
-  position: absolute;
-  left: 33%;
-  width: 6%;
-  bottom: 20%;
-  z-index: 5;
-}
-
-.cloud2 {
-  position: absolute;
-  right: 11%;
-  width: 38%;
-  bottom: 15%;
-  z-index: 2;
-}
-
-.cloud1 {
-  position: absolute;
-  left: 11%;
-  width: 38%;
-  bottom: 13%;
-  z-index: 2;
-}
-
-.lft_star {
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 6%;
-  width: 100%;
-  transform-origin: left top;
-}
-
-.rt_star {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  top: 7%;
-  width: 100%;
-  transform-origin: right top;
-}
-
-.rt_star svg {
-  float: right;
-}
-
-.btm_bg_img {
-  z-index: 3;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-}
 
 .btm_cover {
   position: absolute;
