@@ -102,3 +102,8 @@
   width: 100%;
   left: 0;
 }
+.cntry_pos svg text {
+  font-size: 18px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}

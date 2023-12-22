@@ -17,28 +17,26 @@ function Header() {
         >
           <div className="container">
             <a className="navbar-brand" href="#">
-              {data && data.Icon && (
+              {data.Icon ? (
                 <img
                   src={`./src/assets/images/${data.Icon.Path}`}
                   alt={data.Icon.Name}
                   key={Date.now() * Math.random()}
                 />
-              )}
+              ) : null}
             </a>
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ms-auto">
-                {data?.Navbar?.map((item) => (
+                {data.Navbar?.map((item) => (
                   <li
                     key={Date.now() * Math.random()}
-                    className={
-                      item.SubMenu.length ? "menu-item-has-children" : null
-                    }
+                    className={item.SubMenu ? "menu-item-has-children" : null}
                   >
                     <a href="#">{item.Name}</a>
-                    {item.SubMenu.length ? (
+                    {item.SubMenu ? (
                       <div className="sub-menu">
                         <ul>
                           {item.SubMenu.map((el) => (
