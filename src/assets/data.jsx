@@ -163,6 +163,7 @@ export const PageData = {
       },
       Sec4: {
         Title: "Wait no more Join us!",
+        SubText:"We are chosen by the best companies and content creators, Go Cosmic!",
         CTA: [
           {
             Name: "I Am Blogger",

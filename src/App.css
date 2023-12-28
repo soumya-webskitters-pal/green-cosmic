@@ -591,7 +591,7 @@
 }
 
 .flag-icon-us {
-  background-image: url(images/eng.svg);
+  background-image: url(../src/images/eng.svg);
 }
 
 .flag-icon {
@@ -615,7 +615,7 @@
   font-weight: 800;
   padding-right: 35px;
   position: relative;
-  background-image: url(images/readmore.svg);
+  background-image: url(../src/assets/images/readmore.svg);
   background-position: center right;
   background-size: 15px 11px;
   background-repeat: no-repeat;
@@ -1067,7 +1067,6 @@ figure svg {
   position: relative;
   /* z-index:2; */
 }
-
 
 .btm_cover {
   position: absolute;

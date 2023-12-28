@@ -222,7 +222,8 @@ button:focus {
 }
 
 select {
-  background: url(images/down-arrow.svg) right 10px center no-repeat;
+  background: url(../src/assets/images/down-arrow.svg) right 10px center
+    no-repeat;
   background-size: 20px;
 }
 

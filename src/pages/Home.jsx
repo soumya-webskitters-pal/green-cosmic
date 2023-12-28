@@ -3,31 +3,31 @@ import { PageData } from "../assets/data";
 import "./Home.css";
 
 function Home() {
-  const [data_banner, setData_banner] = useState([]),
-    [data_sec1, setData_sec1] = useState([]),
-    [data_sec2, setData_sec2] = useState([]),
-    [data_sec3, setData_sec3] = useState([]),
-    [data_sec4, setData_sec4] = useState([]),
-    [data_sec5, setData_sec5] = useState([]);
+  const [data_banner, setData_banner] = useState([]);
+  const [data_sec1, setData_sec1] = useState([]);
+  const [data_sec2, setData_sec2] = useState([]);
+  const [data_sec3, setData_sec3] = useState([]);
+  const [data_sec4, setData_sec4] = useState([]);
+  const [data_sec5, setData_sec5] = useState([]);
   useEffect(() => {
-    setData_banner(PageData.Pages.Home.Banner),
-      setData_sec1(PageData.Pages.Home.Sec1),
-      setData_sec2(PageData.Pages.Home.Sec2),
-      setData_sec3(PageData.Pages.Home.Sec3),
-      setData_sec4(PageData.Pages.Home.Sec4),
-      setData_sec5(PageData.Pages.Home.Sec5);
+    setData_banner(PageData.Pages.Home.Banner);
+    setData_sec1(PageData.Pages.Home.Sec1);
+    setData_sec2(PageData.Pages.Home.Sec2);
+    setData_sec3(PageData.Pages.Home.Sec3);
+    setData_sec4(PageData.Pages.Home.Sec4);
+    setData_sec5(PageData.Pages.Home.Sec5);
   }, []);
   return (
     <>
       <section className="banner home_banner">
         <div className="home_banner_img">
-          {data_banner.BgImg ? (
+          {data_banner.BgImg && (
             <img
               src={`./src/assets/images/${data_banner.BgImg.Path}`}
               alt={data_banner.BgImg.Name}
               key={Date.now() * Math.random()}
             />
-          ) : null}
+          )}
           <span className="lft_star">
             <svg
               version="1.1"
@@ -321,7 +321,6 @@ function Home() {
                 alt={data_sec3.Images.Name}
               />
             ) : null}
-            <img src="images/map.svg" alt="" />
             <div className="cntry_pos">
               <svg id="map_Layer_1" viewBox="0 0 1079.9 532.2">
                 <g id="dot_4">
@@ -502,7 +501,8 @@ function Home() {
                 {data_sec4.CTA.map((item, i) => (
                   <a
                     href="#"
-                    class={i % 2 ? "basic_btn" : "basic_btn basic_btn_lt"}
+                    key={Date.now() * Math.random()}
+                    className={i % 2 ? "basic_btn" : "basic_btn basic_btn_lt"}
                   >
                     {item.Name}
                   </a>
@@ -510,46 +510,72 @@ function Home() {
               </div>
             ) : null}
           </div>
-          {/* <div class="alter_box_row w-100">
-            <div class="row sec_row align-items-center">
-              <div class="col-lg-6 col-5 lft_blk">
-                <figure class="bounce bounce2">
-                  <img src="images/home_Layer4.svg" alt="" />
-                </figure>
+          {data_sec4.Features ? (
+            <div className="alter_box_row w-100">
+              {data_sec4.Features.map((item, i) => (
+                <div
+                  className="row sec_row align-items-center"
+                  key={Date.now() * Math.random()}
+                >
+                  <div className="col-lg-6 col-5 lft_blk">
+                    {item.Images ? (
+                      <figure className="bounce bounce2">
+                        <img
+                          src={`./src/assets/images/${item.Images.Path}`}
+                          alt={item.Images.Name}
+                        />
+                      </figure>
+                    ) : null}
+                  </div>
+                  <div className="col-lg-6 col-7 rt_blk">
+                    {item.Title ? <h2>{item.Title}</h2> : null}
+
+                    {item.SubText ? <p>{item.SubText}</p> : null}
+
+                    {item.CTA ? (
+                      <a href="#" className="readmore">
+                        {item.CTA.Name}
+                      </a>
+                    ) : null}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : null}
+        </div>
+      </section>
+
+      <section className="joinus_sec">
+        <div className="container">
+          <div className="joinus_box">
+            <div className="joinus_inner row align-items-center">
+              <div className="col-lg-6 col-sm-12 lft_join">
+                {data_sec5.Title ? (
+                  <h2 key={Date.now() * Math.random()}>{data_sec5.Title}</h2>
+                ) : null}
+                {data_sec5.SubText ? (
+                  <p key={Date.now() * Math.random()}>{data_sec5.SubText}</p>
+                ) : null}
               </div>
-              <div class="col-lg-6 col-7 rt_blk">
-                <h2>Advertiser</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  condimentum ornare lorem a finibus. Vestibulum ac enim a quam
-                  vulputate efficitur. Etiam et nisl bibendum, efficitur erat
-                  vitae, facilisis purus.
-                </p>
-                <a href="advertise.html" class="readmore">
-                  Read More
-                </a>
+              <div className="col-lg-6 col-sm-12 rt_join">
+                {data_sec4.CTA ? (
+                  <div className="btn_wrap w-100">
+                    {data_sec4.CTA.map((item, i) => (
+                      <a
+                        href="#"
+                        key={Date.now() * Math.random()}
+                        className={
+                          i % 2 ? "basic_btn" : "basic_btn basic_btn_lt"
+                        }
+                      >
+                        {item.Name}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             </div>
-            <div class="row sec_row align-items-center">
-              <div class="col-lg-6 col-5 lft_blk">
-                <figure class="bounce bounce2">
-                  <img src="images/home_Layer5.svg" alt="" />
-                </figure>
-              </div>
-              <div class="col-lg-6 col-7 rt_blk">
-                <h2>Blogger</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  condimentum ornare lorem a finibus. Vestibulum ac enim a quam
-                  vulputate efficitur. Etiam et nisl bibendum, efficitur erat
-                  vitae, facilisis purus.
-                </p>
-                <a href="blogger.html" class="readmore">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div> */}
+          </div>
         </div>
       </section>
     </>
